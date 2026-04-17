@@ -10,16 +10,25 @@ Problem Statement
 
 The rapid transition to online learning has not been equitable. Students face varying challenges based on their geographical location, family size, and economic standing. This project aims to answer:
 
-1.	How does economic status impact access to quality learning tools?
-2.	Which level of education spends the most time on social media?
-3.	Which student segments are at the highest risk of "Distraction"?
-4.	Does most of the student population have internet facilities in their local area?
-5.	What age of Students spends the most time on social media?
-6.	Is there a correlation between a student's economic status and the amount of time they dedicate to studying?
-7.	Does having an elderly family member monitoring a student actually increase their study time?
-8.	Is there a Study Intensity Correlates with Social Media Time?
-9.	Do most students prefer a practical, theoretical, or balanced approach to learning?
-10.	Are rural students more satisfied with their learning environment than urban students?
+Economic & Environmental Factors
+
+•	Analyze the impact of economic status on the accessibility of high-quality learning tools.
+•	Investigate the correlation between a student’s economic status and the total time dedicated to studying.
+•	Evaluate the availability of internet facilities within the local areas of the student population.
+•	Compare the satisfaction levels regarding learning environments between rural and urban students.
+
+Social Media & Distraction Patterns
+
+•	Identify which level of education records the highest amount of time spent on social media.
+•	Determine the specific age groups of students that exhibit the highest social media consumption.
+•	Segment the student population to pinpoint cohorts at the highest risk of academic distraction.
+•	Correlate study intensity levels with the duration of daily social media usage.
+
+Learning Preferences & Home Environment
+
+•	Assess the preference distribution among students for practical, theoretical, or balanced learning approaches.
+•	Measure the impact of elderly family monitoring on the actual increase of a student’s study time.
+
 
  Tools & Technologies
 •	Microsoft Excel: Initial data cleaning and structure validation.
@@ -32,28 +41,20 @@ The rapid transition to online learning has not been equitable. Students face va
 •	Transformation: Used Power Query to create conditional columns for "Performance Rank" and "Study Intensity."
 •	Normalization: Ensured numerical columns like "Average Score" and "Sleep Time" were correctly typed for aggregation.
 
-
 DAX (Data Analysis Expressions)
+
 Key measures and columns were authored to drive the logic of the dashboard:
-•	Level of Subjects = IF(Online_Education_Trends_2021_1[Number of Subjects] > 6,"MaximumSubjects","Minimum Subjects")
-
-•	Study Intensity = SWITCH(TRUE(),
-'Online_Education_Trends_2021_1'[Study time (Hours)] >= 6, "High Intensity",
-'Online_Education_Trends_2021_1'[Study time (Hours)] >= 3, "Moderate     Intensity", "Low Intensity")
-
-•	Performance Variance = [Performance in online] - CALCULATE(AVERAGE('Online_Education_Trends_2021_1'[Study time (Hours)]), ALL('Online_Education_Trends_2021_1'))
-
-•	Ideal Study Environment = IF('Online_Education_Trends_2021_1'[Internet facility in your locality] >3  && 'Online_Education_Trends_2021_1'[Have separate room for studying?] = "Yes", "Yes", "No")
+•	Do the calculated column for how many subjects are handled by Students. 
+•	Find the intensity in studies of students (High, Moderate , Low) 
+•	Do the calculations for finding Performance Variance of Students.
+•	Analyse the Ideal Study Environment is available for students.
 
 Measures: 
 
-•	Total Students = COUNTROWS('Online_Education_Trends_2021_1')
-
-•	Digital Access % = DIVIDE(CALCULATE([Total Students], 'Online_Education_Trends_2021_1'[Internet facility in your locality] > 3 && 'Online_Education_Trends_2021_1'[Have separate room for studying?] = "Yes"), [Total Students], 0)
-
-•	Satisfaction % = DIVIDE(CALCULATE([Total Students], 'Online_Education_Trends_2021_1'[Level of Satisfaction] = "Good"), [Total Students], 0)
-
-•	Group Study % = DIVIDE(CALCULATE([Total Students], 'Online_Education_Trends_2021_1'[Engaged in group studies?] = "Yes"), [Total Students])
+•	Find the Total Number of Students.
+•	Analyse Digital Access percentage of Students.
+•	Find the Satisfaction percentage of Students in Online Class
+•	Observe the Students involve in Group Study 
 
 Analysis & Visualization
 
@@ -85,9 +86,6 @@ Dashboards:
 
 2. Digital Divide Dashboard:
 <img width="1397" height="840" alt="Screenshot 2026-04-08 204337" src="https://github.com/user-attachments/assets/91c1455a-6505-490b-b7b5-2a9641bbb85d" />
-
-
-
 
 Insights & Conclusions
 
