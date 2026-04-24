@@ -59,24 +59,42 @@ Measures:
 Analysis & Visualization
 
 The dashboard is divided into two primary analytical views:
+
 Page 1: Digital Divide
+
 •	Treemap: Visualizes the distribution of devices (Laptop vs. Mobile).
+
 •	Donut Chart: Shows "Distraction Risk" weighted by economic status.
+
 •	Line and Clustered Column Chart: Compares Social Media time and Study time by age.
+
 •	Funnel Chart : Compares Time spent on Social media by Level of Education.
+
 •	Decomposition Tree : It identifies the hidden root causes of student performance.
+
 •	Clustered Column Chart: Separate room vs Family Size.
 
+
 Page 2: Habits & Lifestyle
+
 •	100% Stacked Bar Chart: Correlation between Clearing Doubts and Group Study engagement vs Level of Education.
+
 •	Line Chart: Social Media Time and Study Intensity Vs Level of Education.
+
 •	Stacked Bar Chart: Family Size Vs Separate room for Studying.
+
 •	Tree Map: Home Location Vs Level of Satisfaction.
+
 •	Ribbon Chart: Study Time by Age Vs Elderly Monitored Students.
+
 •	Line and Stacked Column Chart: Average Score Vs Sleep Time by Level of Education.
+
 •	Funnel Chart: Mode of Interest by Total Students.
+
 •	Clustered Column Chart: Study Time by Economic Status.
+
 •	Slicers: Allow users to filter the entire report by "Level of Education" and "Study Intensity.
+
 
 Dashboards:
 
